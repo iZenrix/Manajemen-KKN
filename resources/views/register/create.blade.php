@@ -18,7 +18,7 @@
                             <div
                                 class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
                                 <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
-                                    style="background-image: url('../assets/img/illustrations/illustration-signup.jpg'); background-size: cover;">
+                                    style="background-image: url('../assets/img/illustrations/kkn2.jpeg'); background-size: cover;">
                                 </div>
                             </div>
                             <div
@@ -37,7 +37,7 @@
                                                     value="{{ old('name') }}">
                                             </div>
                                             @error('name')
-                                            <p class='text-danger inputerror'>{{ $message }} </p>
+                                                <p class='text-danger inputerror'>{{ $message }} </p>
                                             @enderror
                                             <div class="input-group input-group-outline mt-3">
                                                 <label class="form-label">Email</label>
@@ -45,14 +45,14 @@
                                                     value="{{ old('email') }}">
                                             </div>
                                             @error('email')
-                                            <p class='text-danger inputerror'>{{ $message }} </p>
+                                                <p class='text-danger inputerror'>{{ $message }} </p>
                                             @enderror
                                             <div class="input-group input-group-outline mt-3">
                                                 <label class="form-label">Password</label>
                                                 <input type="password" class="form-control" name="password">
                                             </div>
                                             @error('password')
-                                            <p class='text-danger inputerror'>{{ $message }} </p>
+                                                <p class='text-danger inputerror'>{{ $message }} </p>
                                             @enderror
                                             <div class="form-check form-check-info text-start ps-0 mt-3">
                                                 <input class="form-check-input" type="checkbox" value=""
@@ -86,17 +86,17 @@
     </div>
 
     @push('js')
-    <script src="{{ asset('assets') }}/js/jquery.min.js"></script>
-    <script>
-        $(function() {
-    
-        var text_val = $(".input-group input").val();
-        if (text_val === "") {
-          $(".input-group").removeClass('is-filled');
-        } else {
-          $(".input-group").addClass('is-filled');
-        }
-    });
-    </script>
+        <script src="{{ asset('assets') }}/js/jquery.min.js"></script>
+        <script>
+            $(function() {
+
+                var text_val = $(".input-group input").val();
+                if (text_val === "") {
+                    $(".input-group").removeClass('is-filled');
+                } else {
+                    $(".input-group").addClass('is-filled');
+                }
+            });
+        </script>
     @endpush
 </x-layout>
